@@ -1,0 +1,45 @@
+body {
+    background: rgb(241, 241, 241);
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+hr {
+    margin: 30px 0;
+    width: 90%;
+    border: 1px solid rgb(231, 231, 231);
+}
+#User {
+    margin: 20px auto;
+    max-width: 1090px;
+}
+#userImg {
+    padding-left: 0;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    width: 0;
+}
+#imgOverlayTxt {
+    height: min-content;
+    margin-right: 10px;
+}
+#rff {
+    width: 100%;
+}
+.card {
+    min-width: 60vw;
+}
+#location {
+    color: rgb(36, 182, 36);
+}
+@media only screen and (max-width: 764px) {
+    #userImg {
+        width: 75%;
+        margin: -10px;
+    }
+}
+@media only screen and (max-width: 1110px) {
+    #User {
+        margin: 20px;
+    }
