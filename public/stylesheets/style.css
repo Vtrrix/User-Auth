@@ -1,236 +1,257 @@
-    body{
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
 
-    }
-    .flex-container {
-    display: flex;
-    flex-direction: row;
-    }
+.login {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5vw;
+}
 
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin: 5vw; */
+  /* width: 35vw; */
+  width: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
 
-    .login{ 
-        width: 30vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 5vw;
+#loginHeading,
+#signupHeading {
+  text-align: center;
+  font-size: 2.5rem;
+  transform: translateX(-5%);
+  color: rgba(0, 0, 0, 0.719);
+  width: max-content;
+}
 
-    }
+form {
+  width: 410px;
+}
 
-    .signup{ 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* margin: 5vw; */
-        /* width: 35vw; */
-        width: 0;
-        margin: 0;
-        overflow: hidden;
-        transition: 0.3s ease-in-out;
-    }
+#userlabel,
+#passlabel,
+#userlabel1Signup,
+#userlabel2Signup,
+#passlabelSignup,
+#maillabelSignup,
+#handlelabel {
+  z-index: -1;
+  padding: 3px;
+  color: rgba(103, 100, 255, 1);
+  position: relative;
+  top: 40px;
+  opacity: 0;
+  transition: 0.1s ease-in-out;
+}
 
-    #loginHeading , #signupHeading{
-        text-align: center;
-        font-size: 2.5rem;
-        transform: translateX(-5%);
-        color: rgba(0, 0, 0, 0.719);
-        width: max-content;
-    }
+.input {
+  background: rgb(224, 224, 224);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 900;
+  color: rgb(117, 117, 117);
+  width: 90%;
+  height: 35px;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 3px solid rgba(103, 100, 255, 0);
+  transition: 0.09s ease-in-out;
+  font-size: 20px;
+}
 
-    form{
-        width: 410px;
-    }
+.input:focus {
+  border: 3px solid rgba(103, 100, 255, 1);
+}
 
-    #userlabel, #passlabel,
-    #userlabelSignup, #passlabelSignup, #handlelabel{
-        z-index: -1;
-        padding: 3px;
-        color:rgba(103,100,255,1);
-        position: relative;
-        top: 40px;
-        opacity: 0;
-        transition: 0.1s ease-in-out;
-    }
+.keepInAndForgot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    .input{
-        background: rgb(224, 224, 224);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-weight: 900;
-        color: rgb(117, 117, 117);
-        width: 90%;
-        height: 35px;
-        border-radius: 4px;
-        padding: 16px;
-        margin-bottom: 14px;
-        border: 3px solid rgba(103, 100, 255, 0);
-        transition: 0.09s ease-in-out;
-        font-size: 20px;
-    }
+.keepInInput {
+  cursor: pointer;
+}
 
+.keepIn label {
+  font-family: "Baloo Thambi 2", cursive;
+  color: rgb(117, 117, 117);
+  font-size: 1.1rem;
+}
+#forgot {
+  color: rgba(103, 100, 255, 1);
+  font-weight: bolder;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+}
 
-    .input:focus {
-        border: 3px solid rgba(103,100,255,1);
-    }
+#forgot:hover,
+#forgot:active {
+  color: rgba(130, 127, 254, 1);
+}
 
-    .keepInAndForgot{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+.button {
+  width: 410px;
+  height: 75px;
+  color: rgb(252, 252, 252);
+  text-align: center;
+  position: relative;
+  font-family: "Baloo Thambi 2", cursive;
+  border-radius: 5px;
+  border: none;
+  background: rgb(103, 100, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(103, 100, 255, 1) 0%,
+    rgba(130, 127, 254, 1) 100%
+  );
+  font-size: 1.55rem;
+  cursor: pointer;
+  padding: 20px 172px;
+}
+.button:hover,
+.button:active {
+  background: linear-gradient(
+    90deg,
+    rgb(130, 128, 255) 0%,
+    rgb(154, 153, 255) 100%
+  );
+}
 
-    .keepInInput{
-        cursor: pointer;
-    }
+.SignUpButton {
+  width: 410px;
+  height: 75px;
+  color: rgb(252, 252, 252);
+  text-align: center;
+  position: relative;
+  font-family: "Baloo Thambi 2", cursive;
+  border-radius: 5px;
+  border: none;
+  background: rgb(103, 100, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(103, 100, 255, 1) 0%,
+    rgba(130, 127, 254, 1) 100%
+  );
+  font-size: 1.55rem;
+  cursor: pointer;
+  padding: 20px 152px;
+}
 
-    .keepIn label{
-        font-family: 'Baloo Thambi 2', cursive;
-        color: rgb(117, 117, 117);
-        font-size: 1.1rem;
-    }
-    #forgot{
-        color:rgba(103,100,255,1);
-        font-weight: bolder;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-decoration: none;
-    }
+.SignUpButton:hover,
+.SignUpButton:active {
+  background: linear-gradient(
+    90deg,
+    rgb(130, 128, 255) 0%,
+    rgb(154, 153, 255) 100%
+  );
+}
 
-    #forgot:hover , #forgot:active{
-        color:rgba(130,127,254,1) ;
-    }
+#newUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  margin-top: 20px;
+}
 
-    .button{
-        width: 410px;
-        height: 75px;
-        color: rgb(252, 252, 252);
-        text-align: center;
-        position: relative;
-        font-family: 'Baloo Thambi 2', cursive;
-        border-radius: 5px;
-        border: none;
-        background: rgb(103,100,255);
-        background: linear-gradient(90deg, rgba(103,100,255,1) 0%, rgba(130,127,254,1) 100%); 
-        font-size:1.55rem;
-        cursor: pointer;
-        padding: 20px 172px;
-    }
-    .button:hover , .button:active{
-        background: linear-gradient(90deg, rgb(130, 128, 255) 0%, rgb(154, 153, 255) 100%);
-    }
+#createAccLabel {
+  font-family: "Baloo Thambi 2", cursive;
+  color: rgb(117, 117, 117);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+#createAccLink {
+  text-decoration: none;
+  color: rgba(103, 100, 255, 1);
+  cursor: pointer;
+}
+#createAccLink:hover,
+#createAccLink:active {
+  color: rgb(129, 127, 253);
+}
 
+@media only screen and (max-width: 1050px) {
+  body {
+    flex-direction: column-reverse;
+  }
+  .signup {
+    width: 90vw;
+  }
+  /* .signup{ */
+  /* height: 0; */
+  /* } */
+}
 
+@media only screen and (max-width: 576px) {
+  .login {
+    width: 90vw;
+    margin: auto;
+  }
+  form {
+    width: 100%;
+  }
+  .button,
+  .SignUpButton {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
 
-    .SignUpButton{
-        width: 410px;
-        height: 75px;
-        color: rgb(252, 252, 252);
-        text-align: center;
-        position: relative;
-        font-family: 'Baloo Thambi 2', cursive;
-        border-radius: 5px;
-        border: none;
-        background: rgb(103,100,255);
-        background: linear-gradient(90deg, rgba(103,100,255,1) 0%, rgba(130,127,254,1) 100%); 
-        font-size:1.55rem;
-        cursor: pointer;
-        padding: 20px 152px;
-    }
+@media only screen and (max-width: 420px) {
+  .button,
+  .SignUpButton {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
 
-    .SignUpButton:hover , .SignUpButton:active{
-        background: linear-gradient(90deg, rgb(130, 128, 255) 0%, rgb(154, 153, 255) 100%);
-    }
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
 
+  /* display: flex; */
+  /* flex-direction: row; */
+}
 
-    #newUser{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-weight: lighter;
-        margin-top: 20px;
-    }
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    #createAccLabel{
-        font-family: 'Baloo Thambi 2', cursive;
-        color: rgb(117, 117, 117);
-        font-size: 0.95rem;
-        margin-bottom:4px ;
-    }
-    #createAccLink{
-        text-decoration: none;
-        color:rgba(103,100,255,1);
-        cursor: pointer;
-    }
-    #createAccLink:hover ,#createAccLink:active{
-        color:rgb(129, 127, 253);
-    }
-
-
-
-    @media only screen and (max-width: 1050px) {
-        body{
-            flex-direction: column-reverse;
-        }
-        .signup{
-            width: 90vw;
-        }
-        /* .signup{ */
-            /* height: 0; */
-        /* } */
-    }
-    
-    @media only screen and (max-width: 576px) {
-    
-        .login {
-            width: 90vw;
-            margin: auto;
-        }
-        form{
-            width: 100%;
-        }
-        .button, .SignUpButton{
-            width: 100%;
-            padding: 10px 20px;
-        }
-    }
-    
-    @media only screen and (max-width: 420px) {
-        .button , .SignUpButton{
-            width: 100%;
-            padding: 10px 20px;
-        }
-    }
-
-    /* The alert message box */
-    .alert {
-        padding: 20px;
-        background-color: #f44336; /* Red */
-        color: white;
-        margin-bottom: 15px;
-        
-        /* display: flex; */
-        /* flex-direction: row; */
-    }
-    
-    /* The close button */
-    .closebtn {
-        margin-left: 15px;
-        color: white;
-        font-weight: bold;
-        float: right;
-        font-size: 22px;
-        line-height: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    
-    /* When moving the mouse over the close button */
-    .closebtn:hover {
-        color: black;
-    } 
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
