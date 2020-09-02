@@ -81,8 +81,8 @@ if (window.innerWidth >= 1050) {
   });
 } else {
   createAccLink.addEventListener("click", () => {
-    console.log("hello");
     signup.style.height = "100%";
     signup.style.margin = "5vw";
+    signup.style.width = "35vw";
   });
 }
