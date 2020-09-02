@@ -198,7 +198,7 @@ form {
     flex-direction: column-reverse;
   }
   .signup {
-    width: 90vw;
+    width: 0;
   }
   /* .signup{ */
   /* height: 0; */
