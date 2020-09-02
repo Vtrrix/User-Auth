@@ -186,10 +186,7 @@ form{
     }
     .signup{
         height: 0;
-    }
-    .login{
-        width: 
-    }
+    }   
 }
 
 @media only screen and (max-width: 576px) {
