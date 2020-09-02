@@ -83,14 +83,14 @@ app.post('/login', passport.authenticate('local', {
 
 })
 
-// app.post('/login',
-//   passport.authenticate('local', { successRedirect: '/',
-//                                    failureRedirect: '/login',
-//                                     })
-// );
-
 app.get('/new', middleware.isLoggedIn ,(req, res) => {
-	res.send('you are logged in');
+	res.render('profile.ejs');
+})
+
+app.get('/logout', (req, res) => {
+	req.logout()
+	req.flash('success','Logged you out')
+	res.redirect('/')
 })
 
 app.listen(PORT, () => {
