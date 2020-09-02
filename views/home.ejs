@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <!-- <script>
         history.pushState(null, document.title, location.href);
@@ -12,53 +13,41 @@
             history.go(1);
         };
     </script> -->
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-    <div class="flex-container">
-      <div class="login">
+<body>
+    
+  <div class="flex-container">
+
+    <div class="login">
+        
         <% if(error && error.length > 0) { %>
-        <div class="alert">
-          <span
-            class="closebtn"
-            onclick="this.parentElement.style.display='none';"
-            >&times;</span
-          >
-          <%= error %>
-        </div>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <%= error %>
+            </div>
         <% } %>
-
+        <% if(success && success.length > 0) { %>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <%= success %>
+            </div>
+        <% } %>
+        
         <h1 id="loginHeading">Login</h1>
         <p id="error-text"></p>
         <form action="/login" method="POST" id="login-form">
-          <label for="username" id="userlabel">Username</label>
-          <br />
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-            required
-            class="input"
-          />
-          <br />
-          <label for="password" id="passlabel">Password</label>
-          <br />
-          <input
-            type="password"
-            name="password"
-            id="user_pass"
-            placeholder="Password"
-            required
-            class="input"
-          />
-          <br />
-          <!-- <div class="keepInAndForgot">
+            <label for="username" id="userlabel">Username</label>
+            <br>
+            <input type="text" name="username" id="username" placeholder="Username" required class="input">
+            <br>
+            <label for="password" id="passlabel">Password</label>
+            <br>
+            <input type="password" name="password" id="user_pass" placeholder="Password" required class="input">
+            <br>
+            <!-- <div class="keepInAndForgot">
                 <div class  ="keepIn">
                     <input type="checkbox" name="keepMeLoggedIn" id="keepInInput">
                     <label for="keepMeLoggedIn">Remember Me</label>
@@ -67,84 +56,54 @@
                 <a href="#" id="forgot">Forgot?</a>
 
             </div> -->
-          <br />
-          <button type="submit" class="button">Login</button>
+            <br>
+            <button type="submit" class="button">Login</button>
         </form>
 
         <div id="newUser">
-          <p id="createAccLabel">Don't have an account yet ?</p>
-          <a id="createAccLink" href="#">Create an account</a>
+            <p id="createAccLabel">Don't have an account yet ?</p>
+            <a id="createAccLink" href="#">Create an account</a>
         </div>
-      </div>
 
-      <div class="signup">
+    </div>
+
+    <div class="signup">
         <h1 id="signupHeading">Sign Up</h1>
         <p id="error-text"></p>
-        <form action="/signup" method="POST" id="login-form">
-          <label for="userhandle" id="handlelabel">Username</label>
-          <br />
-          <input
-            type="text"
-            name="username"
-            id="userhandle"
-            placeholder="Enter your useraname"
-            required
-            class="input"
-          />
-          <br />
+        <form action="/signup"  method="POST" id="login-form">
+            <label for="userhandle" id="handlelabel">Username</label>
+            <br>
+            <input type="text" name="username" id="userhandle" placeholder="Enter your useraname" required class="input">
+            <br>
 
-          <label for="firstname" id="userlabel1Signup">First Name</label>
-          <br />
-          <input
-            type="text"
-            name="firstName"
-            id="username1Signup"
-            placeholder="Enter your firstname"
-            required
-            class="input"
-          />
-          <br />
+            <label for="firstname" id="userlabelSignup">First Name</label>
+            <br>
+            <input type="text" name="firstName" id="usernameSignup" placeholder="Enter your firstname" required class="input">
+            <br>
 
-          <label for="lastname" id="userlabel2Signup">Last Name</label>
-          <br />
-          <input
-            type="text"
-            name="lastName"
-            id="username2Signup"
-            placeholder="Enter your lastname"
-            required
-            class="input"
-          />
-          <br />
+            <label for="lastname" id="userlabelSignup">Last Name</label>
+            <br>
+            <input type="text" name="lastName" id="usernameSignup" placeholder="Enter your lastname" required class="input">
+            <br>
 
-          <label for="email" id="maillabelSignup">Email</label>
-          <br />
-          <input
-            type="text"
-            name="email"
-            id="mailSignup"
-            placeholder="Enter your email"
-            required
-            class="input"
-          />
-          <br />
+            <label for="email" id="userlabelSignup">Email</label>
+            <br>
+            <input type="text" name="email" id="usernameSignup" placeholder="Enter your email" required class="input">
+            <br>
 
-          <label for="password" id="passlabelSignup">Password</label>
-          <br />
-          <input
-            type="password"
-            name="password"
-            id="user_passSignup"
-            placeholder="Password"
-            required
-            class="input"
-          />
-          <br /><br />
 
-          <button type="submit" class="SignUpButton">Sign Up</button>
+            <label for="password" id="passlabelSignup">Password</label>
+            <br>
+            <input type="password" name="password" id="user_passSignup" placeholder="Password" required class="input">
+            <br><br>
+
+            <button type="submit" class="SignUpButton">Sign Up</button>
         </form>
-      </div>
+
+
     </div>
+  </div>
     <script src="/javascript/index.js" type="text/javascript"></script>
-  </body>
+</body>
+
 </html>
