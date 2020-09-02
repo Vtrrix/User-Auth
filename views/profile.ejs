@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/profileStyle.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="icon" type="image/png" href="./img/favicon.ico" />
+
+		<title>OnGithub</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="row">
+				<div class="col-md-12 p-3 d-flex justify-content-end">
+					<form class="form-inline justify-content-right"  v-on:submit.prevent="fetchData">
+						<!-- <input
+							class="form-control mr-sm-2"
+							type="search"
+							placeholder="Search.."
+							aria-label="Search"
+							v-model="name"
+						/> -->
+						<a
+							class="btn btn-dark my-2 my-sm-0"
+							href="/logout"
+						>
+							Logout
+                        </a>
+					</form>
+				</div>
+			</div>
+			<div id="User">
+				<div class="row align-middle justify-content-center">
+					<div class="card shadow mb-5 bg-white rounded">
+						<div class="row">
+							<div class="col-md-7" id="userImg">
+								<img
+									:src="userData.avatar_url"
+									class="card-img"
+									alt="User Pic"
+								/>
+								<div class="card-img-overlay d-flex justify-content-end">
+									<span class="badge badge-pill badge-dark" id="imgOverlayTxt"
+										>{{userData.company}}
+									</span>
+								</div>
+							</div>
+							<div class="col-md-5 p-3">
+								<div class="card-body align-middle text-center">
+									<div class="row">
+										<div class="col-md-12">
+											<h1 class="card-title display-5">{{userData.name}}</h1>
+											<h5 class="card-title display-5 font-weight-light">
+												@{{userData.login}}
+											</h5>
+											<div
+												class="row d-flex align-middle justify-content-center my-3"
+												style="color: rgb(36, 182, 36);"
+											>
+												<i class="material-icons" style="font-size: 24px;"
+													>my_location</i
+												>
+
+												<h5
+													class="font-weight-light mx-1"
+													style="font-size: 18px;"
+												>
+													{{userData.location}}
+												</h5>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="row">
+												<div class="col-md-5 m-2 my-2">
+													<a :href="userData.html_url" target="_blank">
+														<div>
+															<i
+																class="fab fa-github"
+																style="
+																	font-size: 32px;
+																	cursor: pointer;
+																	color: rgb(14, 14, 14);
+																"
+															>
+															</i></div
+													></a>
+												</div>
+												<div class="col-md-5 m-2 my-2">
+													<a :href="userData.blog" target="_blank">
+														<div>
+															<i
+																class="fa fa-info-circle"
+																style="
+																	font-size: 32px;
+																	cursor: pointer;
+																	color: rgb(14, 14, 14);
+																"
+															></i></div
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<p class="card-text">
+													"{{userData.bio}}"
+												</p>
+											</div>
+											<hr />
+											<div class="row" id="rff">
+												<div class="col-md-4">
+													<h5 class="card-title display-5 font-weight-light">
+														Repos
+													</h5>
+													<h5 class="card-title display-4 font-weight-light">
+														{{userData.public_repos}}
+													</h5>
+												</div>
+												<div class="col-md-4">
+													<h5 class="card-title display-5 font-weight-light">
+														Followers
+													</h5>
+													<h5 class="card-title display-4 font-weight-light">
+														{{userData.followers}}
+													</h5>
+												</div>
+												<div class="col-md-4">
+													<h5 class="card-title display-5 font-weight-light">
+														Following
+													</h5>
+													<h5 class="card-title display-4 font-weight-light">
+														{{userData.following}}
+													</h5>
+												</div>
+											</div>
+											<div
+												class="row d-flex justify-content-center p-3 m-2"
+												style="width: 100%;"
+											>
+												<a
+													href="mailto:viveksonybcd@gmail.com"
+													class="btn btn-primary"
+													>Send message</a
+												>
+                                            </div>
+                                            <div
+												class="row d-flex justify-content-center"
+												style="width: 100%;"
+											>
+												<a
+													href="https://vtrrix.github.io/Portfolio/"
+													class="btn btn-success"
+													>Visit my Portfolio</a
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- <script src="./app.js"></script> -->
+        <script src="/javascript/profileScript.js" type="text/javascript"></script>
+	</body>
+</html>
