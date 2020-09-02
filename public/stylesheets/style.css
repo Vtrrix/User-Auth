@@ -174,10 +174,10 @@ form{
 
 
 @media only screen and (max-width: 1050px) {
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-      }
+        /* .flex-container {
+            display: flex;
+            flex-direction: column;
+        } */
     body{
         flex-direction: column-reverse;
     }
