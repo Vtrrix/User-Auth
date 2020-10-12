@@ -1,45 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+:root {
+  --primary: #30e3ca;
+  --secondary: #40514e;
+  --error: #f85959;
+}
+/* base styles & title */
 body {
-    background: rgb(241, 241, 241);
+  font-family: "Noto Serif";
+  color: var(--secondary);
 }
-.row {
-    margin-left: 0;
-    margin-right: 0;
+.App {
+  max-width: 960px;
+  margin: 0 auto;
 }
-hr {
-    margin: 30px 0;
-    width: 90%;
-    border: 1px solid rgb(231, 231, 231);
+.title h1 {
+  font-family: "Lobster", sans-serif;
+
+  color: var(--primary);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: normal;
 }
-#User {
-    margin: 20px auto;
-    max-width: 1090px;
+.title h2,
+.title p {
+  text-align: center;
 }
-#userImg {
-    padding-left: 0;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    width: 0;
+.title h2 {
+  margin-top: 60px;
+  font-size: 2.6rem;
 }
-#imgOverlayTxt {
-    height: min-content;
-    margin-right: 10px;
+
+/* upload form styles */
+form {
+  margin: 30px auto 10px;
+  text-align: center;
 }
-#rff {
-    width: 100%;
+label input {
+  height: 0;
+  width: 0;
+  opacity: 0;
 }
-.card {
-    min-width: 60vw;
+label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 30px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
 }
-#location {
-    color: rgb(36, 182, 36);
+label:hover {
+  background: var(--primary);
+  color: white;
 }
-@media only screen and (max-width: 764px) {
-    #userImg {
-        width: 75%;
-        margin: -10px;
-    }
+.output {
+  height: 60px;
+  font-size: 0.8rem;
 }
-@media only screen and (max-width: 1110px) {
-    #User {
-        margin: 20px;
-    }
+.error {
+  color: var(--error);
+}
+
+/* progress bar styles */
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}
+
+/* image grid styles */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.img-wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-wrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+}
+
+/* modal styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.selectImg {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 20vh auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  /* border: 3px solid white; */
+}
+.imgOptions {
+  position: absolute;
+  right: 0;
+
+  margin: 10px;
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.delete,
+.download {
+  /* width: fit-content; */
+  margin: 20px 20px;
+}
+
+.delete img,
+.download img {
+  width: 2rem;
+  cursor: pointer;
+}
